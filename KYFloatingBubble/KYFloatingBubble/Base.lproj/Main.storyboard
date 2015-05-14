@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Esi-1r-w0g">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="FOJ-Mm-5V8">
+            <objects>
+                <viewController id="Esi-1r-w0g" customClass="ViewController" customModule="KYFloatingBubble" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tSX-i3-ZpS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dpz-9f-oNq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fcX-Zs-OLU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwX-EV-1n0" userLabel="Button_yellow">
+                                <rect key="frame" x="15" y="400" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6t0-nQ-Zaa"/>
+                                    <constraint firstAttribute="width" constant="100" id="dre-lS-15p"/>
+                                </constraints>
+                                <state key="normal" image="bubble_yellow">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LuanruAction:" destination="Esi-1r-w0g" eventType="touchUpInside" id="KLY-xe-Cab"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Er3-aT-cs4" userLabel="Button_orange">
+                                <rect key="frame" x="175" y="400" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="wb4-Kj-wbv"/>
+                                    <constraint firstAttribute="height" constant="130" id="y5i-Un-Ls1"/>
+                                </constraints>
+                                <state key="normal" image="bubble_orange">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="GanyinAction:" destination="Esi-1r-w0g" eventType="touchUpInside" id="QX1-5p-9ni"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGZ-9U-jCn" userLabel="Button_blue">
+                                <rect key="frame" x="165" y="100" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="KzJ-za-X9r"/>
+                                    <constraint firstAttribute="height" constant="120" id="Y5o-t6-Z6W"/>
+                                </constraints>
+                                <state key="normal" image="bubble_blue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchAction:" destination="Esi-1r-w0g" eventType="touchUpInside" id="jyU-Qm-0g4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYX-CU-jy3" userLabel="Button_red">
+                                <rect key="frame" x="65" y="220" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="cAI-7a-N9E"/>
+                                    <constraint firstAttribute="width" constant="110" id="lAm-Ej-dSm"/>
+                                    <constraint firstAttribute="width" constant="160" id="qRg-IZ-Q4b"/>
+                                    <constraint firstAttribute="height" constant="110" id="x15-aQ-PMb"/>
+                                </constraints>
+                                <state key="normal" image="bubble_red">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="x15-aQ-PMb"/>
+                                        <exclude reference="lAm-Ej-dSm"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="createAction:" destination="Esi-1r-w0g" eventType="touchUpInside" id="089-mf-Ra8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EGZ-9U-jCn" firstAttribute="leading" secondItem="dYX-CU-jy3" secondAttribute="trailing" constant="-60" id="BF6-XB-D7x"/>
+                            <constraint firstAttribute="centerY" secondItem="dYX-CU-jy3" secondAttribute="centerY" id="E5x-va-5a7"/>
+                            <constraint firstAttribute="centerX" secondItem="dYX-CU-jy3" secondAttribute="centerX" id="IRH-rG-0MW"/>
+                            <constraint firstItem="Dpz-9f-oNq" firstAttribute="top" secondItem="mwX-EV-1n0" secondAttribute="bottom" constant="100" id="LAo-n7-SxQ"/>
+                            <constraint firstItem="dYX-CU-jy3" firstAttribute="leading" secondItem="fcX-Zs-OLU" secondAttribute="leading" constant="65" id="MjK-Db-JRb"/>
+                            <constraint firstItem="dYX-CU-jy3" firstAttribute="leading" secondItem="mwX-EV-1n0" secondAttribute="trailing" constant="-50" id="fK7-Ec-j8L"/>
+                            <constraint firstItem="Er3-aT-cs4" firstAttribute="leading" secondItem="dYX-CU-jy3" secondAttribute="trailing" constant="-50" id="hWj-ih-qdc"/>
+                            <constraint firstItem="EGZ-9U-jCn" firstAttribute="top" secondItem="tSX-i3-ZpS" secondAttribute="bottom" constant="80" id="j5g-mU-zQV"/>
+                            <constraint firstAttribute="centerX" secondItem="dYX-CU-jy3" secondAttribute="centerX" id="kBJ-eQ-hwZ"/>
+                            <constraint firstItem="Dpz-9f-oNq" firstAttribute="top" secondItem="Er3-aT-cs4" secondAttribute="bottom" constant="70" id="noy-M1-NEa"/>
+                            <constraint firstAttribute="centerY" secondItem="dYX-CU-jy3" secondAttribute="centerY" id="tvK-Rz-jeO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="E5x-va-5a7"/>
+                                <exclude reference="IRH-rG-0MW"/>
+                                <exclude reference="kBJ-eQ-hwZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="bubble_blue" destination="EGZ-9U-jCn" id="10g-58-JeU"/>
+                        <outlet property="bubble_orange" destination="Er3-aT-cs4" id="Jwg-oF-Za4"/>
+                        <outlet property="bubble_red" destination="dYX-CU-jy3" id="xcR-oI-ini"/>
+                        <outlet property="bubble_yellow" destination="mwX-EV-1n0" id="uNg-R3-VLe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6o-hN-MR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005" y="1579"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bubble_blue" width="297" height="298"/>
+        <image name="bubble_orange" width="300" height="300"/>
+        <image name="bubble_red" width="300" height="300"/>
+        <image name="bubble_yellow" width="300" height="300"/>
+    </resources>
+</document>
