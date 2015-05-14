@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         let bubbles = [self.bubble_blue,self.bubble_red,self.bubble_yellow,self.bubble_orange]
         
         for bt in bubbles{
+            
+            //1.绕中心圆移动 Circle move
             var pathAnimation = CAKeyframeAnimation(keyPath: "position")
             pathAnimation.calculationMode = kCAAnimationPaced
             pathAnimation.fillMode = kCAFillModeForwards
@@ -38,17 +40,15 @@ class ViewController: UIViewController {
             }else if (bt == self.bubble_blue){
                 pathAnimation.duration = 8.0
             }
-            
-            
+        
             var curvedPath = CGPathCreateMutable()
             let circleContainer = CGRectInset(bt.frame, bt.frame.size.width/2-3, bt.frame.size.width/2-3)
             CGPathAddEllipseInRect(curvedPath, nil, circleContainer)
-
-            
             pathAnimation.path = curvedPath
             bt.layer.addAnimation(pathAnimation, forKey: "myCircleAnimation")
             
-            
+
+            //2.X方向上的缩放 scale in X
             var scaleX = CAKeyframeAnimation(keyPath: "transform.scale.x")
             scaleX.duration = 3
             scaleX.values = [1.0, 1.05, 1.0]
@@ -68,6 +68,8 @@ class ViewController: UIViewController {
             bt.layer.addAnimation(pathAnimation, forKey: "scaleXAnimation")
             
             
+            
+            //2.Y方向上的缩放 scale in Y
             var scaleY = CAKeyframeAnimation(keyPath: "transform.scale.y")
             scaleY.duration = 4
             scaleY.values = [1.0, 1.05, 1.0]
