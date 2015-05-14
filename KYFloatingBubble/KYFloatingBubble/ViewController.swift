@@ -49,10 +49,9 @@ class ViewController: UIViewController {
             
 
             //2.X方向上的缩放 scale in X
-            var scaleX = CAKeyframeAnimation(keyPath: "transform.scale.x")
-            scaleX.duration = 3
-            scaleX.values = [1.0, 1.05, 1.0]
-            scaleX.keyTimes = [0.0, 0.5, 1.0]
+            var scaleX = CAKeyframeAnimation(keyPath:"transform.scale.x")
+            scaleX.values   =  [1.0, 1.1, 1.0]
+            scaleX.keyTimes =  [0.0, 0.5,1.0]
             scaleX.repeatCount = Float.infinity
             scaleX.autoreverses = true
             scaleX.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
@@ -65,14 +64,13 @@ class ViewController: UIViewController {
             }else if (bt == self.bubble_blue){
                 scaleX.duration = 5
             }
-            bt.layer.addAnimation(pathAnimation, forKey: "scaleXAnimation")
+            bt.layer.addAnimation(scaleX, forKey: "scaleXAnimation")
             
             
             
             //2.Y方向上的缩放 scale in Y
-            var scaleY = CAKeyframeAnimation(keyPath: "transform.scale.y")
-            scaleY.duration = 4
-            scaleY.values = [1.0, 1.05, 1.0]
+            var scaleY = CAKeyframeAnimation(keyPath:"transform.scale.y")
+            scaleY.values = [1.0, 1.1, 1.0]
             scaleY.keyTimes = [0.0, 0.5,1.0]
             scaleY.repeatCount = Float.infinity
             scaleY.autoreverses = true
@@ -86,7 +84,7 @@ class ViewController: UIViewController {
             }else if (bt == self.bubble_blue){
                 scaleY.duration = 5
             }
-            bt.layer.addAnimation(pathAnimation, forKey: "scaleYAnimation")
+            bt.layer.addAnimation(scaleY, forKey: "scaleYAnimation")
         }
         
     }
